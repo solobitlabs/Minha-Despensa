@@ -29,6 +29,7 @@ expect fun createPlatformHttpClientEngine(): HttpClientEngine
 
 internal fun isTrustedDevHostname(hostname: String): Boolean {
     return hostname.endsWith("domus.arpa") ||
+        hostname.endsWith("solobit.com.br") ||
         hostname == "localhost" ||
         hostname == "10.0.2.2" ||
         hostname.startsWith("100.")

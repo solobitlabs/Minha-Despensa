@@ -40,6 +40,6 @@ class InvoiceServerConfig(
     }
 
     companion object {
-        const val DEFAULT_BASE_URL = "https://despensa.domus.arpa"
+        const val DEFAULT_BASE_URL = "https://despensa.solobit.com.br"
     }
 }

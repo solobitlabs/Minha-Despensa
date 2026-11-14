@@ -24,5 +24,5 @@
 package com.bitlabbr.minhadespensa.data.remote
 
 data class SyncServerConfig(
-    val baseUrl: String = "https://despensa.domus.arpa",
+    val baseUrl: String = "https://despensa.solobit.com.br",
 )
