@@ -77,9 +77,14 @@ internal fun createTrustManager(): Pair<SSLSocketFactory, X509TrustManager> {
                     }
 
                     subject.contains("domus.arpa") ||
+                        subject.contains("solobit.com.br") ||
                         issuer.contains("mkcert") ||
                         issuer.contains("domus") ||
-                        sanList.any { it.contains("domus.arpa") || it.contains("localhost") }
+                        sanList.any {
+                            it.contains("domus.arpa") ||
+                                it.contains("solobit.com.br") ||
+                                it.contains("localhost")
+                        }
                 } == true
 
                 if (!isDevOrDomusCert) {

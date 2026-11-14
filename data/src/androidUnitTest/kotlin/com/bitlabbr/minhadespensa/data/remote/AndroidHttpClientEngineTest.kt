@@ -35,6 +35,7 @@ class AndroidHttpClientEngineTest {
     @Test
     fun `isTrustedDevHostname should correctly identify domus and local development hostnames`() {
         assertTrue(isTrustedDevHostname("despensa.domus.arpa"))
+        assertTrue(isTrustedDevHostname("despensa.solobit.com.br"))
         assertTrue(isTrustedDevHostname("sub.internal.domus.arpa"))
         assertTrue(isTrustedDevHostname("localhost"))
         assertTrue(isTrustedDevHostname("10.0.2.2"))
