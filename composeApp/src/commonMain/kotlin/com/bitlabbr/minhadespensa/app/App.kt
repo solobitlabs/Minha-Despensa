@@ -28,6 +28,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -60,6 +61,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import br.com.solobit.frostedaurora.FrostedAuroraBox
+import br.com.solobit.frostedaurora.FrostedAuroraDefaults
 import com.bitlabbr.minhadespensa.uisystem.components.core.card.PrimaryContainerGlassCard
 import com.bitlabbr.minhadespensa.uisystem.components.core.snackbar.GlobalNotificationHost
 import com.bitlabbr.minhadespensa.uisystem.features.account.HouseholdAccountScreen
@@ -101,7 +104,12 @@ private val bottomNavItems = listOf(
 @Composable
 fun App() {
     MinhaDespensaTheme {
-        AppBackground {
+        FrostedAuroraBox(
+            modifier = Modifier.fillMaxSize(),
+            palette = FrostedAuroraDefaults.OceanPalette,
+            speed = 0.2f,
+            isDark = isSystemInDarkTheme()
+        ) {
             val navController = rememberNavController()
             Scaffold(
                 containerColor = Color.Transparent,

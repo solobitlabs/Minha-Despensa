@@ -71,6 +71,8 @@ kotlin {
             implementation(libs.androidx.navigation.compose)
             implementation(libs.koin.compose)
             implementation(libs.kotlinx.datetime)
+
+            implementation(libs.frosted.aurora)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

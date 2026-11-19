@@ -29,3 +29,5 @@ reports/
 .agents/
 
 _site/
+
+context/
