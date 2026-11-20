@@ -55,10 +55,3 @@ include(":composeApp")
 include(":core")
 include(":uisystem")
 include("data")
-
-includeBuild("../frosted-aurora") {
-    dependencySubstitution {
-        substitute(module("br.com.solobit:frosted-aurora"))
-            .using(project(":frosted-aurora"))
-    }
-}
